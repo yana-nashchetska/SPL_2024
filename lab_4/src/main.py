@@ -1,22 +1,19 @@
-# src/main.py
-
-from src.ascii_art_generator import generate_ascii_art
+from src.ascii_art_generator import ArtGenerator
+from src.console_reader import ConsoleReader
+from src.console_writer import ConsoleWriter
 
 def main():
-    user_text = input("Введіть текст для ASCII-арту: ")
-    symbol_set = input("Введіть набір символів (наприклад, @, #, *): ")
-    width = input("Введіть ширину ASCII-арту (натисніть Enter для значення за замовчуванням 40): ")
-    height = input("Введіть висоту ASCII-арту (натисніть Enter для значення за замовчуванням 10): ")
-    alignment = input("Оберіть вирівнювання (left, center, right): ")
-    color_mode = input("Оберіть режим кольору (bw або gray): ")
+    # Зчитуємо дані від користувача
+    text = ConsoleReader.read_text()
+    symbol = ConsoleReader.read_symbol_set()
+    width = ConsoleReader.read_width()
+    height = ConsoleReader.read_height()
+    alignment = ConsoleReader.read_alignment()
+    color_mode = ConsoleReader.read_color_mode()
 
-    ascii_art = generate_ascii_art(
-        user_text, 
-        symbol_set or "*", 
-        int(width or 40), 
-        int(height or 10), 
-        alignment or "center", 
-        color_mode or "bw"
-    )
-    
-    print(ascii_art)
+    # Створюємо генератор ASCII-арту
+    art_generator = ArtGenerator(text, symbol, width, height, alignment, color_mode)
+    ascii_art = art_generator.generate()
+
+    # Виводимо результат
+    ConsoleWriter.display_art(ascii_art)
