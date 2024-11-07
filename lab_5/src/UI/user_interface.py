@@ -1,24 +1,34 @@
+import os
+import sys
+
+project_root = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "..", "..", "..")
+)
+if project_root not in sys.path:
+    sys.path.insert(0, os.path.join(project_root, "shared"))
+
 from BLL.art_manager import ArtManager
+from shared.classes.art_generator.console_reader import ConsoleReader
+
 
 class UserInterface:
     def start(self):
         print("Welcome to the ASCII Art 3D Generator!")
-        
-        shape = input("Enter the shape you want to create (cube/sphere): ").strip().lower()
 
-        default_size = 5
-        size_input = input(
-            "Enter the size of the shape (default is {}): ".format(default_size)
-        ).strip()
-
-        size = int(size_input) if size_input.isdigit() else default_size
-
-        symbol = input("Enter the symbol to use (default is '#'): ") or "#"
+        art_type = ConsoleReader.read_art_type()
 
         art_manager = ArtManager()
 
-        shape_instance = art_manager.create_shape(shape, size, symbol)
-        art = art_manager.generate_art(shape_instance, symbol)
+        if art_type == "text":
+            params = ConsoleReader.read_text_parameters()
+            art_instance = art_manager.create_text_art(params)
+        elif art_type == "shape":
+            params = ConsoleReader.read_shape_parameters()
+            art_instance = art_manager.create_shape(
+                params["shape_type"], params["size"], params["symbol"]
+            )
+
+        art = art_manager.generate_art(art_instance)
 
         print("\nGenerated ASCII Art:\n")
         print(art)
