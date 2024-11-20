@@ -1,6 +1,9 @@
-from .ascii_art_creator import generate_ascii_art  # Додайте цей рядок
+from shared.logger import Logger
+from .BLL.ascii_art_creator import generate_ascii_art  # Додайте цей рядок
 
 def main():
+    Logger.log("Лабораторна 3 запущена")
+    
     user_text = input("Введіть текст для ASCII-арту: ")
 
     print("Доступні шрифти:")

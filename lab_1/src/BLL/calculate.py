@@ -1,5 +1,5 @@
-from .input_operator import input_operator
-from .input_number import input_number
+from ..UI.input_operator import input_operator
+from ..UI.input_number import input_number
 from .calc_result import calc_result
 from .history import add_to_history
 from ...AppSettings import get_decimal

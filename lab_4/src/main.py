@@ -1,6 +1,8 @@
 import os
 import sys
 
+from shared.logger import Logger
+
 lab4_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 sys.path.append(lab4_root)
 from shared.classes.art_generator.ascii_art_generator import ArtGenerator
@@ -10,6 +12,8 @@ from shared.classes.art_generator.file_writer import FileWriter
 
 
 def main():
+    Logger.log("Лабораторна 4 запущена")
+    
     text = ConsoleReader.read_text()
     symbol = ConsoleReader.read_symbol_set()
     width = ConsoleReader.read_width()

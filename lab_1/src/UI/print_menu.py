@@ -1,8 +1,8 @@
 # print_menu.py
-from .calculate import calculate
-from .open_settings import open_settings
-from .show_history import show_history
-from .memory import memory_clear, memory_recall, memory_store, memory_add
+from ..BLL.calculate import calculate
+from ..BLL.open_settings import open_settings
+from ..BLL.show_history import show_history
+from ..BLL.memory import memory_clear, memory_recall, memory_store, memory_add
 from ...AppSettings import get_console_color
 
 def print_menu():

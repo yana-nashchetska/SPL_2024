@@ -1,3 +1,4 @@
+from shared.logger import Logger
 import sys
 import os
 import unittest
@@ -12,7 +13,8 @@ from shared.classes.calculator.сalculator_сonsole import CalculatorConsole
 
 
 def main():
+    Logger.log("Лабораторна 2 запущена")
+
     console = CalculatorConsole()
     console.run_console()
     unittest.main()
-

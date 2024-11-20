@@ -1,11 +1,15 @@
 from shared.constants.global_variables import Button, Color
 from shared.functions.ui_functions.handle_input import write_to_output
+from shared.logger import Logger
 
 
 def check_number(param):
     try:
-        return float(param)
+        num = float(param)
+        Logger.log(f"Перевірка числа: {param} — успішна")
+        return num
     except ValueError:
+        Logger.log(f"Помилка перевірки числа: {param} — це не число")
         write_to_output(f"'{param}' не є числом. Введіть число.")
         return check_number(input("Введіть число: "))
 

@@ -5,10 +5,10 @@ import sys
 lab7_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src"))
 sys.path.append(lab7_root)
 
-from src.api_repository import APIRepository
-from src.unit_of_work import UnitOfWork
-from src.user_input_parser import UserInputParser
-from src.history_manager import HistoryManager
+from ..DAL.api_repository import APIRepository
+from lab_7.src.BLL.unit_of_work import UnitOfWork
+from ..UI.user_input_parser import UserInputParser
+from ..BLL.history_manager import HistoryManager
 
 
 class TestAPIRepository(unittest.TestCase):

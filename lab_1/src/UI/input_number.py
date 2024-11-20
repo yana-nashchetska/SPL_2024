@@ -1,4 +1,4 @@
-from .check_number import check_number
+from ..BLL.check_number import check_number
 
 def input_number():
     number = input("Введіть число: ")
