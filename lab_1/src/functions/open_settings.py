@@ -1,4 +1,4 @@
-from AppSettings import set_decimal, set_console_color
+from ...AppSettings import set_decimal, set_console_color
 
 def open_settings():
     while True:

@@ -1,13 +1,13 @@
 import os
 import sys
 
-project_root = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), "..", "..", "..")
-)
-if project_root not in sys.path:
-    sys.path.insert(0, os.path.join(project_root, "shared"))
+# project_root = os.path.abspath(
+#     os.path.join(os.path.dirname(__file__), "..", "..", "..")
+# )
+# if project_root not in sys.path:
+#     sys.path.insert(0, os.path.join(project_root, "shared"))
 
-from BLL.art_manager import ArtManager
+from ..BLL.art_manager import ArtManager
 from shared.classes.art_generator.console_reader import ConsoleReader
 
 

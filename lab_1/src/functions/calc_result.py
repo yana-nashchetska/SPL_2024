@@ -1,5 +1,5 @@
-from constants.GlobalVariables import Button
-from functions.operations_functions import *
+from ..constants.GlobalVariables import Button
+from .operations_functions import *
 
 def calc_result(num1, oper, num2=0):
     a = float(num1)

@@ -1,4 +1,4 @@
-from UI.user_interface import UserInterface
+from .UI.user_interface import UserInterface
 
 def main():
     ui = UserInterface()

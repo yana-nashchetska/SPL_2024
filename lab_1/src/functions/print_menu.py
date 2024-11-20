@@ -1,9 +1,9 @@
 # print_menu.py
-from functions.calculate import calculate
-from functions.open_settings import open_settings
-from functions.show_history import show_history
-from functions.memory import memory_clear, memory_recall, memory_store, memory_add
-from AppSettings import get_console_color
+from .calculate import calculate
+from .open_settings import open_settings
+from .show_history import show_history
+from .memory import memory_clear, memory_recall, memory_store, memory_add
+from ...AppSettings import get_console_color
 
 def print_menu():
     while True:

@@ -1,5 +1,5 @@
 
-from src.interfaces.VisualizationInterface import VisualizationInterface
+from ...interfaces.VisualizationInterface import VisualizationInterface
 import matplotlib.pyplot as plt
 
 class BarChartStrategy(VisualizationInterface):

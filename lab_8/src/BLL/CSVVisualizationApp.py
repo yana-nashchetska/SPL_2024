@@ -1,6 +1,6 @@
 import os
 import pandas as pd
-from src.BLL.factories.VisualizationFactory import VisualizationFactory
+from .factories.VisualizationFactory import VisualizationFactory
 
 file_path = r"d:\NU_LP\3_year\1_semestr\SPL\LW\lab_8\data\people.csv"
 

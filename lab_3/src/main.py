@@ -1,4 +1,4 @@
-from src.ascii_art_creator import generate_ascii_art  # Додайте цей рядок
+from .ascii_art_creator import generate_ascii_art  # Додайте цей рядок
 
 def main():
     user_text = input("Введіть текст для ASCII-арту: ")

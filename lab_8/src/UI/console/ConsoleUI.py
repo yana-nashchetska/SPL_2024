@@ -10,9 +10,9 @@ sys.path.append(lab8_root)
 
 
 from lab_8.src.BLL.CSVVisualizationApp import CSVVisualization
-from src.BLL.factories import VisualizationFactory
-from src.UI.console.ConsoleUIReader import ConsoleUIReader
-from src.UI.console.ConsoleUIWriter import ConsoleUIWriter
+from ...BLL.factories import VisualizationFactory
+from ...UI.console.ConsoleUIReader import ConsoleUIReader
+from ...UI.console.ConsoleUIWriter import ConsoleUIWriter
 from shared.constants.global_variables import csv_menu, criteria_menu
 
 file_path = r"d:\NU_LP\3_year\1_semestr\SPL\LW\lab_8\data\people.csv"

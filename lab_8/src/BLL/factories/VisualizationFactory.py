@@ -7,8 +7,8 @@ lab8_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", 
 sys.path.append(lab8_root)
 
 from lab_8.src.interfaces import VisualizationInterface
-from src.BLL.strategies.LineChartStrategy import LineChartStrategy
-from src.BLL.strategies.BarChartStrategy import BarChartStrategy
+from ...BLL.strategies.LineChartStrategy import LineChartStrategy
+from ...BLL.strategies.BarChartStrategy import BarChartStrategy
 
 
 class VisualizationFactory:

@@ -1,4 +1,4 @@
-from constants.GlobalVariables import Button
+from ..constants.GlobalVariables import Button
 
 def check_operator(potential_op):
 

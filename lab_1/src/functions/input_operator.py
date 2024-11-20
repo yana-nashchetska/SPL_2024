@@ -1,4 +1,4 @@
-from functions.check_operator import check_operator
+from .check_operator import check_operator
 
 def input_operator():
   operator = input("Введіть знак: ")

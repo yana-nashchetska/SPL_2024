@@ -1,6 +1,6 @@
 
 import matplotlib.pyplot as plt
-from src.interfaces.VisualizationInterface import VisualizationInterface
+from ...interfaces.VisualizationInterface import VisualizationInterface
 
 class LineChartStrategy(VisualizationInterface):
     def visualize(self, data_x, data_y):
